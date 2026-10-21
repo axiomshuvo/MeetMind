@@ -1,0 +1,131 @@
+# ==========================================================
+#  .gitignore
+#  Stack: Next.js + Node/Express + MongoDB
+# ==========================================================
+
+
+# ==========================================================
+#  Dependencies
+# ==========================================================
+node_modules/
+.pnp
+.pnp.*
+.pnpm-store/
+.npm/
+
+# Yarn Berry: ignore everything except shared config
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+
+# ==========================================================
+#  Secrets & environment (NEVER commit)
+# ==========================================================
+.env
+.env.*
+*.env
+# Keep the templates so teammates know which variables are needed
+!.env.example
+!.env.*.example
+
+# Private keys & key stores (public certs like *.crt are allowed)
+*.pem
+*.key
+*.p12
+*.pfx
+
+
+# ==========================================================
+#  Build output
+# ==========================================================
+.next/
+out/
+build/
+dist/
+.turbo/
+.vercel/
+.netlify/
+next-env.d.ts
+*.tsbuildinfo
+
+
+# ==========================================================
+#  Caches
+# ==========================================================
+.cache/
+.parcel-cache/
+.eslintcache
+.stylelintcache
+.prettiercache
+
+
+# ==========================================================
+#  Testing & coverage
+# ==========================================================
+coverage/
+.nyc_output/
+playwright-report/
+test-results/
+blob-report/
+.playwright-mcp/
+
+
+# ==========================================================
+#  Logs
+# ==========================================================
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+
+# ==========================================================
+#  AI tooling: share team config, ignore local overrides
+# ==========================================================
+**/.commandcode/settings.local.json
+.claude/settings.local.json
+CLAUDE.local.md
+
+
+# ==========================================================
+#  Editors & IDEs
+# ==========================================================
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+.idea/
+*.swp
+*.swo
+*~
+*.orig
+
+
+# ==========================================================
+#  Operating system files
+# ==========================================================
+.DS_Store
+.AppleDouble
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+
+# ==========================================================
+#  Local uploads / scratch (root only, so app/api/uploads
+#  routes in source code are NOT ignored)
+# ==========================================================
+/uploads/
+/public/uploads/
+/tmp/
+/temp/
+*.tmp
